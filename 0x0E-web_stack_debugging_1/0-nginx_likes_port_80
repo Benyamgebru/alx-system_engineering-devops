@@ -1,0 +1,9 @@
+#!/us/bin/env bash
+# Configures an Nginx server to listen on port 80.
+
+# remote the defualt Nginx configuration file
+rm /etc/nginx/sites-enabled/defualt
+# Configure Nginx to listen on port 80 for all active IPv4 IPs
+ln -s /etc/nginx/sites-avilable/defualt /etc/nginx/sites-enabled/defualt
+# restart nginx
+service nginx restart
